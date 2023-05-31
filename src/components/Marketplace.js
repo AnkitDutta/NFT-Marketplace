@@ -77,7 +77,7 @@ return (
     <div>
         <Navbar></Navbar>
         <div className="flex flex-col place-items-center mt-20">
-            <div className="text-3xl sm:text-5xl font-bold text-white">
+            <div className="md:text-xl font-bold text-white">
                 Top NFTs
             </div>
             <div className="flex mt-5 justify-between flex-wrap max-w-screen-xl text-center">

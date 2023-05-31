@@ -4,6 +4,21 @@ import { uploadFileToIPFS, uploadJSONToIPFS } from "../pinata";
 import Marketplace from '../Marketplace.json';
 import { useLocation } from "react-router";
 
+async function disableButton() {
+    const listButton = document.getElementById("list-button")
+    listButton.disabled = true
+    listButton.style.backgroundColor = "grey";
+    listButton.style.opacity = 0.3;
+}
+
+async function enableButton() {
+    const listButton = document.getElementById("list-button")
+    listButton.disabled = false
+    listButton.style.backgroundColor = "#A500FF";
+    listButton.style.opacity = 1;
+}
+
+
 export default function SellNFT () {
     const [formParams, updateFormParams] = useState({ name: '', description: '', price: ''});
     const [fileURL, setFileURL] = useState(null);
@@ -17,8 +32,12 @@ export default function SellNFT () {
         //check for file extension
         try {
             //upload the file to IPFS
+            disableButton();
+            updateMessage("Uploading image.. please dont click anything!")
             const response = await uploadFileToIPFS(file);
             if(response.success === true) {
+                enableButton();
+                updateMessage("")
                 console.log("Uploaded image to Pinata: ", response.pinataURL)
                 setFileURL(response.pinataURL);
             }

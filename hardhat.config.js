@@ -18,18 +18,12 @@ module.exports = {
     hardhat: {
       chainId: 1337
     },
-    mumbai: {
-      url: `https://polygon-mumbai.g.alchemy.com/v2/nAhiCHKvZkhkp4A7PkkCIBON0-BXW26d`,
-      //accounts: [process.env.privateKey]
-    },
-    matic: {
-      url: "https://polygon-mainnet.g.alchemy.com/v2/nAhiCHKvZkhkp4A7PkkCIBON0-BXW26d",
-      //accounts: [process.env.privateKey]
-    },
-    goerli: {
-      url: "https://eth-goerli.g.alchemy.com/v2/-00ov9Ha8_qo07ePz0ag77G2jJBpH82A",
-      accounts: ["2b4ae9d9b2c6ef62478e7df978cef14ae908d99849d2e415ee72a077798324f0"]
+    sepolia: {
+      url: "https://eth-sepolia.g.alchemy.com/v2/trumkf6XsP2SHNMAamST_D8Hf6mJRM5P",
+      accounts: ["bbc2d08bf6bcaa2676e77c3a9d599d050ab3ec9c53c7d93cd2e5fac641d6056b"]
+
     }
+
   },
   solidity: {
     version: "0.8.4",

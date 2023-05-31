@@ -58,7 +58,6 @@ async function connectWebsite() {
     let val = window.ethereum.isConnected();
     if(val)
     {
-      console.log("here");
       getAddress();
       toggleConnect(val);
       updateButton();
